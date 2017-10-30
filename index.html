@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.4.0/gl-matrix.js"></script>
+      <link rel="stylesheet" href="./style/pageStyle.css" type="text/css">
+      <script type="text/javascript" src="./scripts/script.js"> </script>
+
+    </head>
+
+    <body onload="init()">
+
+        <h1>3D object's wireframe</h1>
+
+        <div>
+
+            <table id="canvasTable" style="width:100%">
+
+                <td id="canvasTd">
+                    <canvas id="myCanvas" width="200" height="100" style="border:2px solid #000000;" </canvas>
+                </td>
+
+
+                <td>
+                     <table style="width:100%" >
+
+
+                        <tr>
+                            <td>
+                                <h2>Pick an object file:</h2>
+                                <div>
+                                     <label id="fileLabel"  for="objectFile" class="button button1" >Choose file </label>
+                                     <input  type="text" id="showFileName" single>
+                                     <input type="file" id="objectFile" name="file" single style="display: none;">
+
+                                     <div>
+                                         <pre id="fileName"><pre>
+                                    </div>
+
+                                </div>
+                            <td>
+                            <td>
+                                <button onclick="drawTriangle()" class="button button2"> Display </button>
+                            <td>
+
+
+                         </tr>
+                         <tr>
+                             <td>
+                                 <h2>Enter the parameters: </h2> </br>
+                             </td>
+                         </tr>
+
+                         <tr>
+                             <td><label for="file">Set the rotatation angle: </label></td>
+                             <td><input value="5" type="text" id="rotatationAngle" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 5)</td>
+                             <td><button onclick="setRotationAngle()" class="button button1"> Set </button></td>
+                         </tr>
+                         <tr>
+                             <td><label for="file">Set object size: </label></td>
+                             <td> <input value="700"type="text" id="scaleVal" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 700)</td>
+                             <td><button onclick="setObjectScaling()" class="button button1"> Set </button></td>
+                         </tr>
+
+                         <tr>
+
+                             <td>
+                                </br>
+                            </td>
+
+                        </tr>
+                         <tr>
+                             <td><label for="file">Set object scaling by X: </label></td>
+                             <td> <input value="0.1" type="text" id="scaleValX" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 0.1)</td>
+                             <td><button onclick="setObjectScalingX()" class="button button1"> Set </button></td>
+                         </tr>
+                         <tr>
+                             <td><label for="file">Set object scaling by Y: </label></td>
+                             <td> <input value="0.1" type="text" id="scaleValY" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 0.1)</td>
+                             <td><button onclick="setObjectScalingY()" class="button button1"> Set </button></td>
+                         </tr>
+                         <tr>
+                             <td><label for="file">Set object scaling by Z: </label></td>
+                             <td> <input value="0.1" type="text" id="scaleValZ" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 0.1)</td>
+                             <td><button onclick="setObjectScalingZ()" class="button button1"> Set </button></td>
+                         </tr>
+
+                         <tr>
+
+                             <td>
+                                </br>
+                            </td>
+
+                        </tr>
+                         <tr>
+                             <td><label for="file">Set object translation by X: </label></td>
+                             <td> <input value="0.35" type="text" id="translateValX" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 0.35)</td>
+                             <td><button onclick="setTranslationX()" class="button button1"> Set </button></td>
+                         </tr>
+                         <tr>
+                             <td><label for="file">Set object translation by Y: </label></td>
+                             <td> <input value="0.35" type="text" id="translateValY" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 0.35)</td>
+                             <td><button onclick="setTranslationY()" class="button button1"> Set </button></td>
+                         </tr>
+                         <tr>
+                             <td><label for="file">Set object translation by Z: </label></td>
+                             <td> <input value="0.35" type="text" id="translateValZ" name="rotatationAngle" single></td>
+                             <td>(DEFAULT = 0.35)</td>
+                             <td><button onclick="setTranslationZ()" class="button button1"> Set </button></td>
+                         </tr>
+
+                         <tr>
+
+                             <td>
+                                </br>
+                            </td>
+
+                        </tr>
+
+                        <tr>
+
+                            <td>
+                               <h2>How to make transformations: </h2>
+                           </td>
+
+                       </tr>
+
+
+                        <table style="width:100%" border="1">
+                            <tr bgcolor="#85e085">
+                                <td align="center">Operation:</td>
+                                <th colspan="2">Rotation</th>
+                                <th colspan="2">Translation</th>
+                                <th colspan="2">Scaling</th>
+
+
+                            </tr>
+
+
+                            <tr >
+                                <td bgcolor="#85e085" align="center">Direction:</td>
+                                <td align="center">+</td>
+                                <td align="center">-</td>
+                                <td align="center">+</td>
+                                <td align="center">-</td>
+                                <td align="center">+</td>
+                                <td align="center">-</td>
+
+                            </tr>
+
+                            <tr >
+                                <td bgcolor="#85e085" align="center">X</td>
+                                <td align="center">W</td>
+                                <td align="center">S</td>
+                                <td align="center">H</td>
+                                <td align="center">F</td>
+                                <td align="center">L</td>
+                                <td align="center">J</td>
+
+                            </tr>
+
+                            <tr >
+                                <td bgcolor="#85e085" align="center">Y</td>
+                                <td align="center">A</td>
+                                <td align="center">D</td>
+                                <td align="center">T</td>
+                                <td align="center">G</td>
+                                <td align="center">I</td>
+                                <td align="center">K</td>
+
+                            </tr>
+
+                            <tr >
+                                <td bgcolor="#85e085" align="center">Z</td>
+                                <td align="center">Q</td>
+                                <td align="center">E</td>
+                                <td align="center">R</td>
+                                <td align="center">Z</td>
+                                <td align="center">U</td>
+                                <td align="center">O</td>
+
+                            </tr>
+
+
+
+
+                        <table>
+
+
+
+
+                     </td>
+
+
+                 </table>
+             </table>
+
+        </div>
+
+
+    </body>
+
+
+</html>

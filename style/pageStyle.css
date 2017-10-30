@@ -1,0 +1,58 @@
+h1 {
+    color: #000000;
+    text-shadow: 3px 3px 0px #4CAF50, 5px 5px 0px #4CAF50;
+    font: 50px 'BazarMedium';
+    letter-spacing: 10px;
+    padding-left: 30px;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    height: 125px;
+    width: 125px;
+    font-style: normal;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.button2:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+label#fileLabel {
+
+    line-height: 16px;
+    padding: .2em .4em;
+    margin: .2em;
+
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #4CAF50;
+    }
+
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+table#canvasTable {
+    width: 100%
+    border: 1px solid powderblue;
+    padding: 10px;
+    background-color: #f1f1c1;
+
+
+}
+
+canvas#myCanvas {
+    background-color: #000000;
+
+}
