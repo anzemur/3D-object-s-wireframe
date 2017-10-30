@@ -4,7 +4,7 @@ JS program that projects a 3D object on 2D canvas without using WebGL and glMatr
 
 ## How to use:
 
-  Pick your .obj file and upload it and then you can do all the tranformations using keyboard.
+  Pick your .obj file and upload it and then you can do all the transformations using keyboard.
 
 </br>
 
