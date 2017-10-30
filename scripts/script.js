@@ -89,6 +89,28 @@ function init() {
 }
 
 
+var modern = true;
+
+function changeStyle() {
+    if(modern) {
+        var stylesheet = document.getElementById("style");
+        stylesheet.setAttribute('href', './style/retro.css');
+
+        modern = false;
+
+    } else {
+        var stylesheet = document.getElementById("style");
+        stylesheet.setAttribute('href', './style/modern.css');
+
+        modern = true;
+
+    }
+
+
+
+}
+
+
 
 
 

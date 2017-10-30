@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Flamenco:300,400');
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(http://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg) ;
+}
+
+h1 {
+    color: #000000;
+    font-family: 'Flamenco', cursive;
+    font-size: 2.5em;
+    letter-spacing: 5px;
+    padding-left: 5%;
+}
+
+h2 {
+    font-family: 'Flamenco', cursive;
+}
+
+
+table{
+    font-family: 'Flamenco', cursive;
+        font-size: 1.05em;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(77, 166, 255, 0.7);
+    height: 125px;
+    width: 125px;
+    font-style: normal;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.button2:hover {
+    background-color: rgb(77, 166, 255);
+    color: white;
+}
+
+label#fileLabel {
+
+    line-height: 16px;
+    padding: .2em .4em;
+    margin: .2em;
+
+}
+
+.button1 {
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(77, 166, 255, 0.7);
+}
+
+.button1:hover {
+    background-color: rgb(77, 166, 255);
+    color: white;
+}
+
+
+table#canvasTable {
+    width: 100%
+    border: 1px solid powderblue;
+    padding: 10px;
+
+
+}
+
+canvas#myCanvas {
+    background-color: #000000;
+
+}
+
+tr#trBg {
+    background-color: rgb(77, 166, 255);
+
+}
+
+td#tdBg {
+    background-color: rgb(77, 166, 255);
+
+}

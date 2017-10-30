@@ -4,14 +4,23 @@
 
     <head>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.4.0/gl-matrix.js"></script>
-      <link rel="stylesheet" href="./style/pageStyle.css" type="text/css">
+      <link id="style" rel="stylesheet" href="./style/modern.css" type="text/css" >
+
+
+
       <script type="text/javascript" src="./scripts/script.js"> </script>
 
     </head>
 
     <body onload="init()">
 
-        <h1>3D object's wireframe</h1>
+        <header>
+            <div>
+                <h1>3D object's wireframe</h1>
+                <button onclick="changeStyle()" style="float: right;" class="button button1" > Change style  </button>
+            <div>
+
+        </header>
 
         <div>
 
@@ -135,7 +144,7 @@
 
 
                         <table style="width:100%" border="1">
-                            <tr bgcolor="#85e085">
+                            <tr id="trBg" bgcolor="#85e085">
                                 <td align="center">Operation:</td>
                                 <th colspan="2">Rotation</th>
                                 <th colspan="2">Translation</th>
@@ -146,7 +155,7 @@
 
 
                             <tr >
-                                <td bgcolor="#85e085" align="center">Direction:</td>
+                                <td id="tdBg" bgcolor="#85e085" align="center">Direction:</td>
                                 <td align="center">+</td>
                                 <td align="center">-</td>
                                 <td align="center">+</td>
@@ -157,7 +166,7 @@
                             </tr>
 
                             <tr >
-                                <td bgcolor="#85e085" align="center">X</td>
+                                <td id="tdBg" bgcolor="#85e085" align="center">X</td>
                                 <td align="center">W</td>
                                 <td align="center">S</td>
                                 <td align="center">H</td>
@@ -168,7 +177,7 @@
                             </tr>
 
                             <tr >
-                                <td bgcolor="#85e085" align="center">Y</td>
+                                <td id="tdBg" bgcolor="#85e085" align="center">Y</td>
                                 <td align="center">A</td>
                                 <td align="center">D</td>
                                 <td align="center">T</td>
@@ -179,7 +188,7 @@
                             </tr>
 
                             <tr >
-                                <td bgcolor="#85e085" align="center">Z</td>
+                                <td id="tdBg" bgcolor="#85e085" align="center">Z</td>
                                 <td align="center">Q</td>
                                 <td align="center">E</td>
                                 <td align="center">R</td>
@@ -189,24 +198,15 @@
 
                             </tr>
 
-
-
-
                         <table>
 
-
-
-
                      </td>
-
 
                  </table>
              </table>
 
         </div>
 
-
     </body>
-
 
 </html>
