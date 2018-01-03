@@ -39,7 +39,8 @@ function init() {
 
 
     inputFile.addEventListener('change', function(e) {
-
+	
+	initMatrixes();
         var showFile = document.getElementById("showFileName");
         showFile.value = inputFile.value;
 
