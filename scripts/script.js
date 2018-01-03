@@ -48,17 +48,6 @@ function init() {
 
     inputFile.addEventListener('change', function(e) {
 	
-	
-	    
-	/** TRS **/
-	S = mat4.create();
-	R = mat4.create();
-	T = mat4.create();
-
-	/** View/Camera matrix **/
-	C = mat4.create();
-	    
-	initMatrixes();
 	 
         var showFile = document.getElementById("showFileName");
         showFile.value = inputFile.value;
