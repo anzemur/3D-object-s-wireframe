@@ -38,8 +38,3 @@ You can get more object files at this [link](https://groups.csail.mit.edu/graphi
 </br>
 </br>
 
-## Screenshot:
-
-</br>
-
-![Screenshot](screenshot.PNG)
