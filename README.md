@@ -13,7 +13,7 @@ JS program that projects a 3D object on 2D canvas without using WebGL and glMatr
 
 ## .obj file:
 
-  Object file must be formed like this:
+  Object file must be formated like this:
 
   ```
   v x1 y1 z1
